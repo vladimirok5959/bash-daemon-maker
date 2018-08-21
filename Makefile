@@ -1,7 +1,7 @@
+RELEASEURL:="https://github.com/vladimirok5959/bash-empty-daemon/releases/download/latest/daemon.zip"
 BINDIR:=/usr/local/bin
 LROTDIR:=/etc/logrotate.d
 INSTALLDIR:=/etc
-RELEASEURL:="https://github.com/vladimirok5959/bash-empty-daemon/releases/download/latest/daemon.zip"
 SINITED:="0"
 
 default: check info
