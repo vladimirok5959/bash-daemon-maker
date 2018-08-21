@@ -54,7 +54,6 @@ create-link: check-manual-run check-if-name-set
 	@if [ ! -z "$(NAME)" ]; then \
 		echo "Create symlink..."; \
 		ln -sf $(INSTALLDIR)/$(NAME).sh $(BINDIR)/$(NAME); \
-		chmod 744 $(BINDIR)/$(NAME); \
 	fi
 
 create-logrotate: check-manual-run check-if-name-set
