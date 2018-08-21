@@ -53,7 +53,7 @@ download: check-manual-run check-if-name-set
 create-link: check-manual-run check-if-name-set
 	@if [ ! -z "$(NAME)" ]; then \
 		echo "Create symlink..."; \
-		ln -sf $(INSTALLDIR)/$(NAME).sh $(BINDIR)/$(NAME); \
+		ln -sf $(INSTALLDIR)/$(NAME)/$(NAME).sh $(BINDIR)/$(NAME); \
 	fi
 
 create-logrotate: check-manual-run check-if-name-set
