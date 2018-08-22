@@ -15,7 +15,7 @@ apt-get install make; apt-get install wget; apt-get install unzip; mkdir ~/tmpda
 make install NAME=**my-service**<br>
 cd ~; rm -rd ~/tmpdaemon<br>
 <br>
-Now we can simply edit daemon `loop.sh` file for our logic.<br>
+Now we can simply edit daemon `/etc/my-service/loop.sh` file for our logic.<br>
 <br>
 **Auto assembly created for and works only on Linux Debian.**<br>
 **For MAX OS X you will needs to change vars `BINDIR`, `LROTDIR` and `INSTALLDIR` to new location.**
