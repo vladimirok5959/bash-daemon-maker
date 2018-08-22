@@ -1,5 +1,5 @@
 # bash-daemon-maker
-Daemon auto assembly by make utility for [bash-empty-daemon](https://github.com/vladimirok5959/bash-empty-daemon).
+Daemon auto assembly by make utility for [bash-empty-daemon](https://github.com/vladimirok5959/bash-empty-daemon)
 
 ## Dependences
 ```
