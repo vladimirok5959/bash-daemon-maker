@@ -59,7 +59,7 @@ create-link: check-manual-run check-if-name-set
 create-logrotate: check-manual-run check-if-name-set
 	@if [ ! -z "$(NAME)" ]; then \
 		echo "Create config file for logrotate..."; \
-		echo "$(INSTALLDIR)/logs/all.log {" > $(LROTDIR)/$(NAME); \
+		echo "$(INSTALLDIR)/$(NAME)/logs/all.log {" > $(LROTDIR)/$(NAME); \
 		echo "	daily" >> $(LROTDIR)/$(NAME); \
 		echo "	missingok" >> $(LROTDIR)/$(NAME); \
 		echo "	rotate 14" >> $(LROTDIR)/$(NAME); \
