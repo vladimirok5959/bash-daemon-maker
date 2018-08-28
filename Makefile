@@ -73,12 +73,12 @@ create-logrotate: check-manual-run check-if-name-set
 	fi
 
 create-autostart:
+	@if [ ! -d "$(INITD)" ]; then \
+		echo "Aborted. Dir '$(INITD)' is not exists"; \
+		exit 1; \
+	fi
 	@if [ ! -z "$(NAME)" ]; then \
 		echo "Create auto start script..."
-		if [ ! -d "$(INITD)" ]; then \
-			echo "Aborted. Dir '$(INITD)' is not exists"; \
-			exit 1; \
-		fi; \
 		echo "#!/bin/sh" > $(INITD)/$(NAME); \
 		echo "" >> $(INITD)/$(NAME); \
 		echo "### BEGIN INIT INFO" >> $(INITD)/$(NAME); \
