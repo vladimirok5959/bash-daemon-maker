@@ -78,7 +78,7 @@ create-autostart:
 		if [ ! -d "$(INITD)" ]; then \
 			echo "Aborted. Dir '$(INITD)' is not exists"; \
 			exit 1; \
-		fi
+		fi; \
 		echo "#!/bin/sh" > $(INITD)/$(NAME); \
 		echo "" >> $(INITD)/$(NAME); \
 		echo "### BEGIN INIT INFO" >> $(INITD)/$(NAME); \
