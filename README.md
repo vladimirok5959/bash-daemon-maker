@@ -24,7 +24,7 @@ Done! Daemon with name 'my-service' successfully generated!
 ```
 cd ~; rm -rd ~/tmpdaemon  
   
-Now we can simply edit daemon `/etc/my-service/loop.sh` file for our logic.  
+Now we can simply edit `/etc/my-service/scripts/example.sh` file or create another one file in `/etc/my-service/scripts` folder and write our logic.  
   
 **Auto assembly created for and works only on Linux Debian.**  
 **For MAX OS X you will needs to change vars `BINDIR`, `LROTDIR` and `INSTALLDIR` to new location.**  
