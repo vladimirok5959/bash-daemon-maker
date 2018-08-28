@@ -78,29 +78,29 @@ create-autostart:
 		exit 1; \
 	fi
 	@if [ ! -z "$(NAME)" ]; then \
-		echo "Create auto start script..."
+		echo "Create auto start script..."; \
 		echo "#!/bin/sh" > $(INITD)/$(NAME); \
 		echo "" >> $(INITD)/$(NAME); \
 		echo "### BEGIN INIT INFO" >> $(INITD)/$(NAME); \
-		echo "# Provides:			nginx" >> $(INITD)/$(NAME); \
-		echo "# Required-Start:		\$local_fs \$network \$syslog" >> $(INITD)/$(NAME); \
-		echo "# Required-Stop:		\$local_fs \$network \$syslog" >> $(INITD)/$(NAME); \
+		echo "# Provides:		nginx" >> $(INITD)/$(NAME); \
+		echo "# Required-Start:		$$local_fs $$network $$syslog" >> $(INITD)/$(NAME); \
+		echo "# Required-Stop:		$$local_fs $$network $$syslog" >> $(INITD)/$(NAME); \
 		echo "# Default-Start:		2 3 4 5" >> $(INITD)/$(NAME); \
 		echo "# Default-Stop:		0 1 6" >> $(INITD)/$(NAME); \
 		echo "# Short-Description:	starts the daemon ($(NAME))" >> $(INITD)/$(NAME); \
 		echo "# Description:		starts the daemon ($(NAME)) using start-stop-daemon" >> $(INITD)/$(NAME); \
 		echo "### END INIT INFO" >> $(INITD)/$(NAME); \
 		echo "" >> $(INITD)/$(NAME); \
-		echo "/usr/local/bin/$(NAME) \$1" >> $(INITD)/$(NAME); \
+		echo "/usr/local/bin/$(NAME) $$1" >> $(INITD)/$(NAME); \
 		echo "exit 0" >> $(INITD)/$(NAME); \
-		chmod 0755 $(INITD)/$(NAME)
-		-ln -sf ../init.d/$(NAME) /etc/rc0.d/K01$(NAME); \
-		-ln -sf ../init.d/$(NAME) /etc/rc1.d/K01$(NAME); \
-		-ln -sf ../init.d/$(NAME) /etc/rc2.d/K01$(NAME); \
-		-ln -sf ../init.d/$(NAME) /etc/rc3.d/S01$(NAME); \
-		-ln -sf ../init.d/$(NAME) /etc/rc4.d/S01$(NAME); \
-		-ln -sf ../init.d/$(NAME) /etc/rc5.d/S01$(NAME); \
-		-ln -sf ../init.d/$(NAME) /etc/rc6.d/K01$(NAME); \
+		chmod 0755 $(INITD)/$(NAME); \
+		ln -sf ../init.d/$(NAME) /etc/rc0.d/K01$(NAME); \
+		ln -sf ../init.d/$(NAME) /etc/rc1.d/K01$(NAME); \
+		ln -sf ../init.d/$(NAME) /etc/rc2.d/K01$(NAME); \
+		ln -sf ../init.d/$(NAME) /etc/rc3.d/S01$(NAME); \
+		ln -sf ../init.d/$(NAME) /etc/rc4.d/S01$(NAME); \
+		ln -sf ../init.d/$(NAME) /etc/rc5.d/S01$(NAME); \
+		ln -sf ../init.d/$(NAME) /etc/rc6.d/K01$(NAME); \
 	fi
 
 show-done-msg: check-manual-run
