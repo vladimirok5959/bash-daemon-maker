@@ -26,7 +26,4 @@ cd ~; rm -rd ~/tmpdaemon
   
 Now we can simply edit `/etc/my-service/scripts/example.sh` file or create another one file in `/etc/my-service/scripts` folder and write our logic.  
   
-**Auto assembly created for and works only on Linux Debian.**  
-**For MAX OS X you will needs to change vars `BINDIR`, `LROTDIR` and `INSTALLDIR` to new location.**  
-  
-**TODO:** Add autorun for daemon at system startup.
+**Auto assembly created for and works only on Linux Debian.**
