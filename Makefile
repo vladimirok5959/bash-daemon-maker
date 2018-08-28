@@ -82,7 +82,7 @@ create-autostart:
 		echo "#!/bin/sh" > $(INITD)/$(NAME); \
 		echo "" >> $(INITD)/$(NAME); \
 		echo "### BEGIN INIT INFO" >> $(INITD)/$(NAME); \
-		echo "# Provides:		nginx" >> $(INITD)/$(NAME); \
+		echo "# Provides:		$(NAME)" >> $(INITD)/$(NAME); \
 		echo "# Required-Start:	\$$local_fs \$$network \$$syslog" >> $(INITD)/$(NAME); \
 		echo "# Required-Stop:	\$$local_fs \$$network \$$syslog" >> $(INITD)/$(NAME); \
 		echo "# Default-Start:	2 3 4 5" >> $(INITD)/$(NAME); \
